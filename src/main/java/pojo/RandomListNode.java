@@ -1,4 +1,4 @@
-package 剑指Offer.offer_po;
+package pojo;
 
 public class RandomListNode {
 

@@ -1,7 +1,7 @@
 package 剑指Offer.tree;
 
 
-import 剑指Offer.offer_po.TreeNode;
+import pojo.TreeNode;
 
 /**
  * 二叉树的镜像

@@ -1,7 +1,7 @@
 package 剑指Offer.list;
 
 
-import 剑指Offer.offer_po.RandomListNode;
+import pojo.RandomListNode;
 
 import java.util.HashMap;
 import java.util.Map;

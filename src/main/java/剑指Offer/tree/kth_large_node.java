@@ -1,6 +1,6 @@
 package 剑指Offer.tree;
 
-import 剑指Offer.offer_po.TreeNode;
+import pojo.TreeNode;
 
 /**
  * BST的第k大节点

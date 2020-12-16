@@ -1,7 +1,7 @@
 package 剑指Offer.list;
 
 
-import 剑指Offer.offer_po.ListNode;
+import pojo.ListNode;
 
 /**
  * 合并俩个排序的链表

@@ -1,7 +1,7 @@
 package 剑指Offer.tree;
 
 
-import 剑指Offer.offer_po.LinkedTreeNode;
+import pojo.LinkedTreeNode;
 
 /**
  * 二叉树中序的下一个节点（有父节点）

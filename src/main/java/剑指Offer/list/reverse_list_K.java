@@ -1,6 +1,6 @@
 package 剑指Offer.list;
 
-import 剑指Offer.offer_po.ListNode;
+import pojo.ListNode;
 
 public class reverse_list_K {
 

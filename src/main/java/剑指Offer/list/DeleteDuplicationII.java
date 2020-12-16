@@ -1,7 +1,7 @@
 package 剑指Offer.list;
 
 
-import 剑指Offer.offer_po.ListNode;
+import pojo.ListNode;
 
 /**
  * 删除排序链表中的重复节点II
