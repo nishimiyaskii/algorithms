@@ -8,10 +8,6 @@ import java.util.Deque;
  */
 public class HOT015_Valid_Parentheses {
 
-    public static void main(String[] args) {
-        System.out.println(new HOT015_Valid_Parentheses().isValid(""));
-    }
-
     public boolean isValid(String s) {
         if (s.length() < 2) return false;
         Deque<Character> stk = new ArrayDeque<>();
