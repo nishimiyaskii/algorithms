@@ -17,6 +17,7 @@ public class HOT049_Word_Search {
 
     boolean backtracking(char[][] board, int x, int y, String word, int u) {
         char c = board[x][y];
+        // 搜到当前位置，如果字母不匹配，直接返回false;否则如果当前是单词的最后一个字母，则说明搜索成功
         if (c != word.charAt(u)) return false;
         if (u == word.length() - 1) return true;
         board[x][y] = '*';

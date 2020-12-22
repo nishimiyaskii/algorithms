@@ -7,6 +7,7 @@ import pojo.ListNode;
  */
 public class HOT051_Remove_Duplicate_from_Sorted_List_II {
 
+    // 1 -> 1 -> 1 -> 2 -> 3
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode dummy = new ListNode(-1), p = dummy;

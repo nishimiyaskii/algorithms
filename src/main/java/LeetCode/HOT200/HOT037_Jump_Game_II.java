@@ -1,7 +1,8 @@
 package LeetCode.HOT200;
 
 /**
- * 跳跃游戏II：最少的步数跳到数组末尾，假设一定能跳到
+ * 跳跃游戏II：最少的步数跳到数组末尾
+ *  前提假设是：一定能跳到
  */
 public class HOT037_Jump_Game_II {
 

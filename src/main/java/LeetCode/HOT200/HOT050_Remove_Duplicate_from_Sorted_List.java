@@ -3,7 +3,7 @@ package LeetCode.HOT200;
 import pojo.ListNode;
 
 /**
- * 排序链表中删除重复项：只留一个
+ * 排序链表中删除重复项：只留一个（重复的节点中留第一个）
  */
 public class HOT050_Remove_Duplicate_from_Sorted_List {
 
