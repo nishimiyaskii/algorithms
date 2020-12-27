@@ -3,8 +3,7 @@ package 剑指Offer.others;
 public class reverse_words {
 
     public static void main(String[] args) {
-        reverse_words t = new reverse_words();
-        System.out.println(t.reverseWords("a good   example"));
+        System.out.println(new reverse_words().reverseWords("hello world!"));
     }
 
     public String reverseWords(String s) {
