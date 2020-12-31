@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Quick {
 
     public static void main(String[] args) {
-        int[] arr = {1, 1, 1, 1, 1, 1};
+        int[] arr = new int[]{5, 2, 4, 1, 3, 6, 0};
         new Quick().sort(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -22,6 +22,7 @@ public class Quick {
             do j --; while (arr[j] > p);
             if (i < j) swap(arr, i, j);
         }
+        System.out.println(Arrays.toString(arr) + " --- " + p + " --- " + j + " --- " + arr[j]);
         quick_sort(arr, l, j);
         quick_sort(arr, j + 1, r);
     }
