@@ -13,6 +13,7 @@ public class find_continuous_seq_with_sum_eq_s {
         List<int[]> list = new ArrayList<>();
         for (int i = 1, j = 1, t = 0; i < s; i ++) {
             while (t < s) t += j ++;
+            // j此时的位置不在序列内
             if (t == s && i < j - 1) {
                 int[] arr = new int[j - i];
                 for (int k = i; k < j; k ++) arr[k - i] = k;
