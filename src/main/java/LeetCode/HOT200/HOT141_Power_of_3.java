@@ -9,11 +9,8 @@ package LeetCode.HOT200;
  */
 public class HOT141_Power_of_3 {
 
-    public static void main(String[] args){
-        System.out.println(Math.log10(27) / Math.log10(3) % 1 == 0);
-    }
-
     public boolean isPowerOfThree(int n) {
+        // % 1是因为double 0.0 == 0返回false
         return n > 0 && (Math.log10(n) / Math.log10(3) % 1 == 0) && (Math.pow(3, 19) % n == 0);
     }
 

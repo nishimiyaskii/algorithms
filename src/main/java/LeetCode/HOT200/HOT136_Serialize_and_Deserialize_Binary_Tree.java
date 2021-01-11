@@ -2,6 +2,8 @@ package LeetCode.HOT200;
 
 import pojo.TreeNode;
 
+import java.util.LinkedList;
+
 /**
  * 二叉树的序列化于反序列化
  * @Author aimerrhythms
@@ -11,39 +13,39 @@ public class HOT136_Serialize_and_Deserialize_Binary_Tree {
 
     StringBuilder res = new StringBuilder();
     public String serialize(TreeNode root) {
-        if(root == null) {
-            res.append("*,");
-        } else {
-            res.append(root.val).append(",");
-            serialize(root.left);
-            serialize(root.right);
-        }
+        dfs_s(root);
         return res.toString();
     }
 
-    int u = 0;
-    public TreeNode deserialize(String data) {
-        if (data.charAt(u) == '*') {
-            u += 2;
-            return null;
+    void dfs_s(TreeNode root) {
+        if (root == null) {
+            res.append("*,");
         } else {
-            TreeNode root = new TreeNode(get(data));
-            root.left = deserialize(data);
-            root.right = deserialize(data);
-            return root;
+            res.append(root.val).append(",");
+            dfs_s(root.left);
+            dfs_s(root.right);
         }
     }
 
-    int get(String s) {
-        boolean neg = false;
-        if (s.charAt(u) == '-') {
-            neg = true;
-            u ++;
+    public TreeNode deserialize(String data) {
+        String[] nodeArr = data.split(",");
+        LinkedList<String> q = new LinkedList<>();
+        for (String nodeStr : nodeArr) q.addLast(nodeStr);
+        return dfs_d(q);
+    }
+
+    TreeNode dfs_d(LinkedList<String> q) {
+        if (q.isEmpty()) {
+            return null;
+        } else if ("*".equals(q.getFirst())){
+            q.removeFirst();
+            return null;
+        } else {
+            TreeNode root = new TreeNode(Integer.parseInt(q.removeFirst()));
+            root.left = dfs_d(q);
+            root.right = dfs_d(q);
+            return root;
         }
-        int k = u;
-        while (u < s.length() && s.charAt(u) !=',') u ++;
-        int num = Integer.parseInt(s.substring(k, u ++));
-        return neg ? -num : num;
     }
 
 }

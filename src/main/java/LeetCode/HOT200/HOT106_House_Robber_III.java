@@ -21,7 +21,9 @@ public class HOT106_House_Robber_III {
         int[] left = dfs(root.left);
         int[] right = dfs(root.right);
         int[] res = new int[2];
+        // !root
         res[0] = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
+        // root
         res[1] = root.val + left[0] + right[0];
         return res;
     }

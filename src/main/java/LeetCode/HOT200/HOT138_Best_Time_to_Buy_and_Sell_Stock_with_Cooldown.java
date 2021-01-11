@@ -1,7 +1,5 @@
 package LeetCode.HOT200;
 
-import java.util.Arrays;
-
 /**
  * 买股票：包含冷冻期
  *
@@ -16,6 +14,7 @@ public class HOT138_Best_Time_to_Buy_and_Sell_Stock_with_Cooldown {
         int n = prices.length;
         if (n < 1) return 0;
         final int INF = (int) Math.pow(10, 8);
+        // dp[i][j]表示第i天，状态为j时的利润
         int[][] dp = new int[n][3];
         for (int i = 0; i < n; i ++) {
             for (int j = 0; j < 3; j ++) {
