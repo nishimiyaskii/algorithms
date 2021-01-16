@@ -8,17 +8,20 @@ import pojo.ListNode;
  */
 public class DeleteDuplicationII {
 
-    public ListNode deleteDuplicationII(ListNode h) {
-        if (h == null || h.next == null) return null;
-        ListNode d = h, l = h;
-        d.next = h;
-        while (l.next != null) {
-            ListNode r = l.next;
-            while (r != null && l.next.val == r.val) r = r.next;
-            if (l.next.next == r) l = l.next;
-            else l.next = r;
+    public ListNode deleteDuplicates(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode dummy = new ListNode(-1), p = dummy;
+        p.next = head;
+        while (p != null && p.next != null) {
+            ListNode l = p.next, r = l.next;
+            while (r != null && r.val == l.val) r = r.next;
+            if (l.next == r) {
+                p = l;
+            } else {
+                p.next = r;
+            }
         }
-        return d.next;
+        return dummy.next;
     }
 
 }

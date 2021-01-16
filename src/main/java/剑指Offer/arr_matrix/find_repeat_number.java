@@ -7,12 +7,15 @@ package 剑指Offer.arr_matrix;
  */
 public class find_repeat_number {
 
-    public int findRepeatNumber(int[] arr) {
-        if (arr.length < 2) return -1;
-        for (int i = 0; i < arr.length; i ++) {
-            if (arr[i] == i) continue;
-            if (arr[i] == arr[arr[i]]) return arr[i];
-            swap(arr, i, arr[i]);
+    public int findRepeatNumber(int[] nums) {
+        int n = nums.length;
+        for (int x : nums) {
+            if (x < 0 || x >= n) return -1;
+        }
+        for (int i = 0; i < nums.length; i ++) {
+            if (nums[i] == i) continue;
+            if (nums[i] == nums[nums[i]]) return nums[i];
+            swap(nums, i, nums[i]);
         }
         return -1;
     }
@@ -22,5 +25,4 @@ public class find_repeat_number {
         arr[l] = arr[r];
         arr[r] = t;
     }
-
 }
