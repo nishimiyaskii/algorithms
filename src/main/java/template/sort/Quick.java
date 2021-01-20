@@ -1,36 +1,24 @@
 package template.sort;
 
-import java.util.Arrays;
-
 public class Quick {
 
-    public static void main(String[] args) {
-        int[] arr = new int[]{5, 2, 4, 1, 3, 6, 0};
-        new Quick().sort(arr);
-        System.out.println(Arrays.toString(arr));
-    }
 
-    private void sort(int[] arr) {
-        quick_sort(arr, 0, arr.length - 1);
-    }
-
-    void quick_sort(int[] arr, int l, int r) {
+    void quickSort(int[] nums, int l, int r) {
         if (l >= r) return;
-        int i = l - 1, j = r + 1, p = arr[l + r >> 1];
+        int i = l - 1, j = r + 1, p = nums[l + r >> 1];
         while (i < j) {
-            do i ++; while (arr[i] < p);
-            do j --; while (arr[j] > p);
-            if (i < j) swap(arr, i, j);
+            do i ++; while (nums[i] < p);
+            do j --; while (nums[j] > p);
+            if (i < j) swap(nums, i, j);
         }
-        System.out.println(Arrays.toString(arr) + " --- " + p + " --- " + j + " --- " + arr[j]);
-        quick_sort(arr, l, j);
-        quick_sort(arr, j + 1, r);
+        quickSort(nums, l, j);
+        quickSort(nums, j + 1, r);
     }
 
-    void swap(int[] arr, int l, int r) {
-        int t = arr[l];
-        arr[l] = arr[r];
-        arr[r] = t;
+    void swap(int[] nums, int l, int r) {
+        int t = nums[l];
+        nums[l] = nums[r];
+        nums[r] = t;
     }
 
 }
